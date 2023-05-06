@@ -1,0 +1,187 @@
+/* Define custom properties */
+:root {
+  --main-font: 'Times New Roman', serif;
+  --base-font-size: 12pt;
+  --heading1-size: 16pt;
+  --heading2-size: 14pt;
+  --margin: 1in;
+}
+
+/* General Document */
+body {
+  font-family: var(--main-font);
+  font-size: var(--base-font-size);
+  line-height: 2;
+  margin: var(--margin);
+}
+
+/* Page Setup */
+@page {
+  size: A4;
+  margin: var(--margin);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--main-font);
+}
+
+h1 {
+  font-size: var(--heading1-size);
+  font-weight: bold;
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 12pt;
+}
+
+h2 {
+  font-size: var(--heading2-size);
+  font-weight: bold;
+  text-align: left;
+  text-transform: capitalize;
+  margin-bottom: 12pt;
+}
+
+h3 {
+  font-size: var(--base-font-size);
+  font-weight: bold;
+  font-style: italic;
+  text-align: left;
+  text-transform: capitalize;
+  margin-bottom: 12pt;
+}
+
+h4 {
+  font-size: var(--base-font-size);
+  font-weight: bold;
+  text-transform: capitalize;
+  display: inline;
+}
+
+h5 {
+  font-size: var(--base-font-size);
+  font-weight: bold;
+  font-style: italic;
+  text-transform: capitalize;
+  display: inline;
+}
+
+h6 {
+  font-size: var(--base-font-size);
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+/* Adjust spacing after h4 and h5 */
+h4::after, h5::after {
+  content: ". ";
+}
+/* Adjust indentation for h4 and h5 */
+h4::before, h5::before {
+  content: "";
+  display: inline-block;
+  width: 0.5in;
+}
+/* Paragraphs */
+p {
+  margin: 0;
+  text-indent: 0.5in;
+}
+
+h4 + p, h5 + p {
+  text-indent: 0.5in;
+  display: inline;
+}
+
+/* Abstract */
+/* This is not working */
+p#abstract{
+  text-indent: 0;
+}
+
+
+/* Blockquotes */
+blockquote {
+  margin: 1em 0;
+  padding-left: 0.5in;
+  border-left: 2px solid #ccc;
+}
+
+/* Lists */
+ul, ol {
+  padding-left: 1em;
+}
+
+/* Figures and Tables */
+figure, table {
+  display: table;
+  margin: 1em auto;
+  font-size: var(--base-font-size);
+  width: 100%;
+}
+
+/* Figures */
+figure {
+  font-size: 10pt;
+}
+
+/* Table captions */
+table caption {
+  display: table-caption;
+  caption-side: top;
+  font-size: var(--base-font-size);
+  font-weight: bold;
+  font-style: italic;
+  text-align: left;
+  padding: 4px 0;
+}
+
+/* Figure captions */
+figcaption {
+  display: table-caption;
+  caption-side: bottom;
+  font-size: 10pt;
+  font-style: italic;
+  text-align: center;
+  padding: 4px 0;
+}
+
+/* Table structure */
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+/* Table header */
+th {
+  font-weight: bold;
+  text-align: left;
+  border-bottom: 2px solid #000;
+  padding: 6px 8px;
+}
+
+/* Table cells */
+td {
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+  padding: 6px 8px;
+}
+
+/* Remove border from the last row */
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* Citations */
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* inline citations */
+/* optional */
+cite {
+  font-style: italic;
+}
