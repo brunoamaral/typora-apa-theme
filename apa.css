@@ -104,7 +104,16 @@ p#abstract{
 blockquote {
   margin: 1em 0;
   padding-left: 0.5in;
-  border-left: 2px solid #ccc;
+  border-left: none;
+  font-size: var(--base-font-size);
+  line-height: 2;
+  position: relative;
+  display: block;
+}
+
+/* Indent additional paragraphs within blockquotes */
+blockquote > p:not(:first-child) {
+  text-indent: 0.5in;
 }
 
 /* Lists */

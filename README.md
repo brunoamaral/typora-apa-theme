@@ -10,6 +10,8 @@ This theme allows you to write your articles in Markdown using [Typora](https://
 - Compatible with Typora's built-in Markdown-to-PDF export feature.
 - Easy-to-use, lightweight, and perfect for academic writing.
 
+![apa-paper-screenshot](./apa-paper-screenshot.png)
+
 ## Installation
 
 1. Download the `typora-apa-theme.css` file from this repository.
